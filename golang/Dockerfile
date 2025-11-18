@@ -11,7 +11,7 @@ RUN apt-get update \
  && rm -fr /var/lib/apt/lists/* \
  && mkdir /custom-cont-init.d
 
-ENV GOPATH=/go
+ENV GOPATH=/config/go
 ENV PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
 
 COPY --chmod=0755 install_go_extensions.sh /custom-cont-init.d/install_go_extensions.sh
