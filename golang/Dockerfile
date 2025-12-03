@@ -7,6 +7,7 @@ ARG TARGETARCH
 ARG GO_DOWNLOAD_URL=https://go.dev/dl/go${GO_VERSION}.linux-${TARGETARCH}.tar.gz
 
 ENV PATH=$PATH:/usr/local/go/bin
+ENV GOPATH=/config/go
 
 # Copy the docker client binary from the builder stage
 COPY --from=docker-cli-builder /usr/local/bin/docker /usr/local/bin/docker
