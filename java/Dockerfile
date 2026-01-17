@@ -2,7 +2,7 @@ FROM docker:latest AS docker-cli-builder
 
 FROM --platform=$BUILDPLATFORM debian:latest AS gradle-builder
 
-ARG GRADLE_VERSION=9.2.1
+ARG GRADLE_VERSION=9.3.0
 ARG GRADLE_HOME=/usr/local/gradle
 
 RUN apt-get update \
@@ -28,7 +28,7 @@ ARG MAVEN_VERSION=3.9.12
 ENV MAVEN_HOME=/usr/local/maven
 ENV PATH=$PATH:$MAVEN_HOME/bin
 
-ARG GRADLE_VERSION=9.2.1
+ARG GRADLE_VERSION=9.3.0
 ENV GRADLE_HOME=/usr/local/gradle
 ENV PATH=$PATH:$GRADLE_HOME/bin
 

@@ -2,7 +2,7 @@ FROM docker:latest AS docker-cli-builder
 
 FROM lscr.io/linuxserver/code-server:latest
 
-ARG GO_VERSION=1.25.5
+ARG GO_VERSION=1.25.6
 ARG TARGETARCH
 ARG GO_DOWNLOAD_URL=https://go.dev/dl/go${GO_VERSION}.linux-${TARGETARCH}.tar.gz
 
